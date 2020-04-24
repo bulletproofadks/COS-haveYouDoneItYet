@@ -1,0 +1,342 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgb(255, 255, 0);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+.background {
+  position: absolute;
+  height: 200px;
+  opacity: 0.7;
+  z-index: -1;
+  right: 10px;
+}
+
+.bottomBackground {
+  position: sticky;
+  height: 200px;
+  opacity: 0.7;
+  right: 10px;
+  top:500px
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  z-index: 3;
+  /* background-image: url("img/background.svg"); */
+}
+
+.heading {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+  transition-duration:1s ;
+}
+
+.content {
+  margin-top: 7.5px;
+  display: grid;
+  grid-gap: 2.5%;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 500px));
+  margin-left: 25px;
+  margin-right: 25px;
+  /* grid-auto-flow: column; */
+  justify-content: space-evenly;
+}
+.nothingTodo-Class {
+  margin-left: 4%;
+  width: 90%;
+  /* min-width: inherit;
+  max-width: inherit; */
+  min-height: 260px;
+  max-height: 320px;
+  opacity: 0.7;
+}
+div[class^="card"] {
+  border: 0.35px solid rgba(0, 0, 0, 0.125);
+  background-color: rgba(245, 245, 245, 0.774);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  max-height: fit-content;
+  white-space: wrap;
+  font-size: 1.2rem;
+  transition-duration: 0.3s;
+}
+div[class^="card"]:hover {
+  box-shadow: 5px 10px 10px -5px rgba(0, 0, 24, 0.5);
+}
+.majorBtn {
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  background-color: #3396ffec;
+  color: black;
+  border: 2px solid #3396ffec;
+  border-radius: 5px;
+}
+.majorBtn:hover {
+  background-color: #005fc5;
+  border: 2px solid #005fc5;
+  color: white;
+}
+.majorBtn:focus, .majorBtn.focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+.todoList-Class {
+  width: 100%;
+  padding: 0;
+}
+.form-Class {
+  display: flex;
+  width: 100%;
+  padding: 0.275rem 0.5rem;
+  justify-self: flex-start;
+  color: #495057;
+  background-color: rgb(240, 240, 240);
+}
+.input-Class {
+  float: left;
+  width: 80%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  padding: 5px 12px 7px 12px;
+  margin: 5px 10px;
+  margin-right: 15px;
+  border-radius: 21px;
+  border: 0;
+  overflow-x: auto;
+  flex-grow: 1;
+}
+input:focus, textarea:focus, select:focus, .editable:focus,.removeCardBtn-Class:focus {
+  outline: none;
+}
+.input-Class:focus {
+  border: none;
+}
+.addTodoBtn-Class {
+  float: right;
+  align-self: center;
+}
+li {
+  width: 94%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 3%;
+  margin: 0.3%;
+  margin-bottom: 0px;
+  border: 0px solid rgba(87, 87, 87, 0.685);
+  border-radius: 21px;
+  overflow: hidden;
+  margin-left: 10px;
+
+}
+li:hover {
+  background-color: rgb(255, 255, 255);
+}
+.delete {
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  border: 0;
+  outline: transparent;
+  padding: 5px;
+  margin-top: -5px;
+  margin-left: -5px;
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+}
+li:hover .delete {
+  display: inline;
+}
+li:hover .editable {
+  margin-right: 30px;
+}
+.delete:hover {
+  background-color: rgba(201, 197, 197, 0.329);
+  border-radius: 50%;
+}
+.delete:focus {
+  background-color: rgba(155, 155, 155, 0.527);
+  border-radius: 50%;
+}
+.addTodoSvg-Class {
+  width: 100%;
+  height: 100%;
+}
+.addTodoBtn-Class {
+  margin-top:10px;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border: 0;
+  outline: transparent;
+  padding: 0;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.addTodoBtn-Class:hover {
+  transform: scale(1.1)
+}
+.editable {
+  flex-grow: 1;
+  margin-left: 2%;
+  margin-right: 70px;
+  height: 30px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+.editable:focus {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.808);
+  cursor: auto;
+}
+.topLine-Class{
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+.cTitle-Class{
+  flex-grow: 1;
+  margin-left: 10px;
+  font-weight: 500;
+  padding-left: 15px;
+  padding-top: 5px;
+  color: #666666de;
+}
+.removeCardBtn-Class{
+justify-self: flex-end;
+  height:2rem;
+  width:2rem;
+  border-radius: 50%;
+  font-weight: 900;
+  font-size: 1.2rem;
+  background-color: rgb(167, 167, 167);
+  color: rgb(31, 31, 31);
+  border: 0;
+  margin: 5px;
+}
+.removeCardBtn-Class:hover{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 245, 245);
+  cursor: pointer;
+  border: 0;
+  font-size: 1.2rem;
+}
+/* ----------------checkB0X-Start-W3Schools-------------- */
+.cbcontainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.cbcontainer input {
+  position: absolute;
+  opacity: 1;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  /* z-index: 3; */
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+  position: absolute;
+   top: 0;
+  left: 0; 
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+
+.cbcontainer:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.cbcontainer input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.cbcontainer input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.cbcontainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 7px;
+  height: 14px;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* ----------------checkB0X-End-------------------- */
+s{
+  opacity: 0.5;
+  font-style: italic;
+}
