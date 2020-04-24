@@ -56,7 +56,7 @@ class View {
         this.topLine = this.createElement("div", "topLine-Class")
 
         this.cTitle = this.createElement("div", "cTitle-Class")
-        this.cTitle.textContent = `Todo List ${key}`
+        this.cTitle.textContent = `Todo List `
         this.removeCardBtn = this.createElement('button', 'removeCardBtn-Class')
         this.removeCardBtn.textContent = "X"
         this.topLine.append(this.cTitle, this.removeCardBtn)
