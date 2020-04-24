@@ -1,7 +1,10 @@
 localStorage.removeItem("randid")
-let Keys = localStorage.length;
+let Keys = 0
 let arrayOfObjects = []
-
+for(let i in localStorage){
+    if(i.length===1)
+    Keys++;
+}
 class Model {
     constructor(key) {
         this.key = key
@@ -188,7 +191,6 @@ class View {
         this.todoList.addEventListener('click', event => {
             if (event.target.type === 'checkbox') {
                 const id = parseInt(event.target.parentElement.parentElement.id)
-                console.log(event.target.parentElement.parentElement.id);
                 handler(id)
             }
         })
@@ -237,16 +239,18 @@ findLargestKey = () => {
     let largestKey = parseInt(0);
     let currentKey;
     for (let key = 0; key < localStorage.length; ++key) {
+        if(localStorage.key(key).length===1){
         currentKey = parseInt(localStorage.key(key));
         largestKey = (currentKey >= largestKey) ? currentKey : largestKey;
-    }
+    }}
     return largestKey;
 }
 renderAll = () => {
-    for (let key = 0; key < Keys; ++key) {
+    for (let key = 0; key < localStorage.length; ++key) {
+        if(localStorage.key(key).length===1){
         let currentKey = (localStorage.key(key));
         arrayOfObjects[currentKey] = new Controller(currentKey, new Model(currentKey), new View(currentKey));
-    }
+    }}
 }
 renderAll()
 
