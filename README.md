@@ -1,10 +1,12 @@
 # COS-haveYouDoneItYet !
-https://bulletproofadks.github.io/COS-haveYouDoneItYet/
+
+
 
 Does **ALL** your tasks belong to the same category **?**
 >No, right. So why use Todo app which can only save list of one **category**.
 >Introducing to you [haveYouDoneItYet](https://bulletproofadks.github.io/COS-haveYouDoneItYet/) Web-app.
 
+# From [Single todo list app](https://taniarascia.github.io/mvc/) to [Multiple todo list app](https://bulletproofadks.github.io/COS-haveYouDoneItYet/).
 
 Hi!  **haveYouDoneItYet** is a **Multi List-Todo App** based on MVC architecture.
 
