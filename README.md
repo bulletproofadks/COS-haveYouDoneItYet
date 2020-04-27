@@ -22,3 +22,5 @@ Hi!  **haveYouDoneItYet** is a **Multi List-Todo App** based on MVC architecture
  - CSS
  - HTML
  - Local Storage API
+ 
+ *basic todo functionalities are taken from this [Source](https://github.com/taniarascia/mvc/blob/master/script.js)
